@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    /> -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./pomo.css" />
+    <title>Pomodoro App</title>
+  </head>
+  <body>
+    <img
+      src="./logo.7479961e8a1563f1f8124a7cff89bef2.svg"
+      alt=""
+      class="title"
+    />
+
+    <nav class="nav">
+      <div class="switch"></div>
+      <button id="0" class="nav-btn pomodoro toggle">
+        pomodoro
+      </button>
+      <button id="1" class="nav-btn sb">short break</button>
+      <button id="2" class="nav-btn lb">long break</button>
+    </nav>
+
+    <div class="timer-container">
+      <div class="circle"></div>
+      <div class="timer">
+        <h1 class="time"></h1>
+        <button class="control">Start</button>
+      </div>
+      <audio src="./service-bell_daniel_simion.mp3"></audio>
+    </div>
+
+    <button class="settings-btn">
+      <i class="fa fa-cog cog" aria-hidden="true"></i>
+    </button>
+
+    <!-- settings -->
+
+    <div class="settings-container">
+      <div class="top-bar">
+        <h2>Settings</h2>
+        <i class="fa fa-close close-btn"></i>
+      </div>
+      <div class="settings">
+        <h3>Time (minutes)</h3>
+
+        <div class="inputs">
+          <div class="input">
+            <h5>pomodoro</h5>
+            <input
+              class="pd"
+              type="number"
+              maxlength="25"
+              minlength="1"
+              step="1"
+              value="25"
+            />
+          </div>
+          <div class="input">
+            <h5>short break</h5>
+            <input
+              class="s"
+              type="number"
+              maxlength="15"
+              minlength="3"
+              step="1"
+              value="5"
+            />
+          </div>
+          <div class="input">
+            <h5>long break</h5>
+            <input
+              class="l"
+              type="number"
+              maxlength="15"
+              minlength="5"
+              step="1"
+              value="15"
+            />
+          </div>
+        </div>
+
+        <div class="font-select">
+          <h4>font</h4>
+
+          <div class="fonts">
+            <label
+              id="Kumbh Sans"
+              class="font-input kumbh-sans active-font"
+              >Aa</label
+            >
+            <label
+              id="Roboto Slab"
+              class="font-input roboto-slab"
+              >Aa</label
+            >
+            <label
+              id="Space Mono"
+              class="font-input space-mono"
+              >Aa</label
+            >
+          </div>
+        </div>
+
+        <div class="color-select">
+          <h4>color</h4>
+
+          <div class="colors">
+            <label
+              id="#f87070"
+              class="color-input orangered active-color"
+            ></label>
+            <label
+              id="#70f3f8"
+              class="color-input teal"
+            ></label>
+            <label
+              id="#d881f8"
+              class="color-input purple"
+            ></label>
+          </div>
+        </div>
+        <input type="submit" class="apply" value="apply" />
+      </div>
+    </div>
+
+    <div class="error-container">
+      <h4 class="error">
+        A Timer is Running. Pause it to Change Mode or
+        Settings.
+      </h4>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
